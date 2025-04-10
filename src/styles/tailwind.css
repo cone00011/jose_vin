@@ -2,7 +2,13 @@
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, cyberpunk;
+}
 
+@theme {
+  /* Her tilføjes theme variable // tokens */
+}
 
 @theme {
   /* Her tilføjes theme variable // tokens */
