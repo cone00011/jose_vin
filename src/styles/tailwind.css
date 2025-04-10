@@ -1,4 +1,5 @@
-@import 'tailwindcss';
+@import url("https://use.typekit.net/xxu7aag.css");
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -7,11 +8,12 @@
 }
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  --font-youngblood: "youngblood", sans-serif;
 }
 
-@theme {
-  /* Her tilføjes theme variable // tokens */
+@font-face {
+  font-family: "youngblood", sans-serif;
+  src: url("https://use.typekit.net/xxu7aag.css");
 }
 
 @layer base {
@@ -24,9 +26,7 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }
