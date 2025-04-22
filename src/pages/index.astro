@@ -2,63 +2,85 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
+import Card from '../components/Card.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Gul naturvin">
-	<section class="text-center py-10 bg-neutral">
+	<section class="text-center py-10" style="background-color: #ebe6d8;">
 		<img 
 		  src="/img/herosection.png" 
 		  alt="gul naturvin" 
 		  class="w-full h-[500px] object-cover object-center"
 		>
-		<h1 class="text-6xl font-youngblood text-yellow-400 mt-10">Naturkassen</h1>
-		<p class="text-lg text-yellow-300 mt-2">
+		<h1 class="text-6xl font-youngblood text-yellow-600 mt-10">Naturkassen</h1>
+		<p class="text-lg text-yellow-600 mt-2">
 		  Gul naturvin i kasser – hver måned eller ved lejlighed. Fordi det altid er naturvinstid.
 		</p>
 		<div class="mt-4">
-		  <a href="/abonnement" class="btn btn-primary bg-yellow-400 text-black border-none hover:bg-yellow-300">
+		  <a href="/abonnement" class="btn text-yellow-600 border-1 border-yellow-600 hover:scale-105 transform transition-all duration-300" style="background-color: #ebe6d8;">
 			Bestil nu
 		  </a>
 		</div>
 	</section>
 	
-	<section class="text-center py-12 bg-neutral rounded-lg shadow-lg mb-20">
-		<h2 class="text-3xl font-bold text-yellow-400 mb-8">Fakta</h2>
-		<div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-		  <div class="flex flex-col items-center bg-yellow-400 p-6 rounded-lg shadow-xl hover:scale-105 transform transition-all duration-300">
+	<section class="text-center py-12 border-1 border-yellow-600 shadow-lg mb-20" style="background-color: #ebe6d8;">
+		<h2 class="text-3xl font-bold text-yellow-600 mb-8">Fakta</h2>
+		<div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12" >
+		  <div class="flex flex-col items-center bg-yellow-600 p-6 rounded-lg shadow-xl hover:scale-105 transform transition-all duration-300">
 			<p class="text-2xl font-bold text-black">18.000</p>
 			<p class="text-lg text-black mt-4">Flasker gulvin solgt i 2024</p>
 		  </div>
-		  <div class="flex flex-col items-center bg-yellow-400 p-6 rounded-lg shadow-xl hover:scale-105 transform transition-all duration-300">
+		  <div class="flex flex-col items-center bg-yellow-600 p-6 rounded-lg shadow-xl hover:scale-105 transform transition-all duration-300">
 			<p class="text-2xl font-bold text-black">1.500</p>
 			<p class="text-lg text-black mt-4">Abonnementer</p>
 		  </div>
-		  <div class="flex flex-col items-center bg-yellow-400 p-6 rounded-lg shadow-xl hover:scale-105 transform transition-all duration-300">
+		  <div class="flex flex-col items-center bg-yellow-600 p-6 rounded-lg shadow-xl hover:scale-105 transform transition-all duration-300">
 			<p class="text-2xl font-bold text-black">2.500</p>
 			<p class="text-lg text-black mt-4">Leveringer</p>
 		  </div>
 		</div>
 	</section>
 
-	<h2 class="text-5xl font-youngblood text-black mb-15 text-center mx-auto">Kom i gang med at købe!</h2>
+	<h2 class="text-5xl font-youngblood text-yellow-600 mb-15 text-center mx-auto">Kom i gang med at købe!</h2>
 
-	<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-10 bg-neutral">
-		{Array.from({ length: 8 }).map(() => (
-		  <div class="card shadow-lg bg-black text-yellow-300">
-			<figure>
-			  <img src="/img/gul_naturvin.webp" alt="Bye bye bye!" class="w-full h-64 object-cover" />
-			</figure>
-			<div class="card-body">
-			  <h2 class="card-title text-yellow-400">Bye bye bye!</h2>
-			  <p>En funky gul naturvin med attitude. Let bitter, saftig og super velegnet til både picnic og pizza. Skål!</p>
-			  <div class="card-actions justify-end mt-4">
-				<button class="btn btn-secondary bg-yellow-400 text-black hover:bg-yellow-300">Køb nu!</button>
-			  </div>
-			</div>
-		  </div>
-		))}
-	</section>
+<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-10 bg-white">
+	<Card
+  url="/singleview"
+  cardimage="gul_naturvin.webp"
+  cardimagealt="Naturvin"
+  cardtitle="Bye bye bye!"
+  cardtekst="En funky gul naturvin med attitude. Let bitter, saftig og super velegnet til både picnic og pizza. Skål!"
+  cardbuttontekst="'Bye' now!"
+/>
+
+<Card
+  url="/singleview"
+  cardimage="gul_naturvin.webp"
+  cardimagealt="Naturvin"
+  cardtitle="Bye bye bye!"
+  cardtekst="En funky gul naturvin med attitude. Let bitter, saftig og super velegnet til både picnic og pizza. Skål!"
+  cardbuttontekst="'Bye' now!"
+/>
+
+<Card
+  url="/singleview"
+  cardimage="gul_naturvin.webp"
+  cardimagealt="Naturvin"
+  cardtitle="Bye bye bye!"
+  cardtekst="En funky gul naturvin med attitude. Let bitter, saftig og super velegnet til både picnic og pizza. Skål!"
+  cardbuttontekst="'Bye' now!"
+/>
+
+<Card
+  url="/singleview"
+  cardimage="gul_naturvin.webp"
+  cardimagealt="Naturvin"
+  cardtitle="Bye bye bye!"
+  cardtekst="En funky gul naturvin med attitude. Let bitter, saftig og super velegnet til både picnic og pizza. Skål!"
+  cardbuttontekst="'Bye' now!"
+/>
+  </section>
 
 	<section class="bg-neutral py-12 px-4">
 		<h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-10">Klar til et abonnement på gul naturvin?</h2>

@@ -1,0 +1,32 @@
+---
+export interface Props {
+  url: string;
+  cardimage: string;
+  cardimagealt: string;
+  cardtitle: string;
+  cardtekst: string;
+  cardbuttontekst: string;
+}
+
+const {
+  url,
+  cardimage,
+  cardimagealt,
+  cardtitle,
+  cardtekst,
+  cardbuttontekst
+} = Astro.props;
+---
+
+<a href={url} class="card shadow-lg hover:shadow-xl transition-shadow duration-300 border-1 border-yellow-600">
+  <figure>
+    <img src={`/img/${cardimage}`} alt={cardimagealt} class="w-full h-64 object-contain mt-8" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title text-yellow-600">{cardtitle}</h2>
+    <p>{cardtekst}</p>
+    <div class="card-actions justify-end mt-4">
+      <button class="btn text-yellow-600 border-1 border-yellow-600 hover:scale-105 transform transition-all duration-300" style="background-color: #ebe6d8;">{cardbuttontekst}</button>
+    </div>
+  </div>
+</a>
